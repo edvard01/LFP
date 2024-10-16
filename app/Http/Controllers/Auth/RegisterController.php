@@ -7,7 +7,6 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -59,16 +58,15 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  Request $request
+     * @param  array  $data
      * @return \App\Models\User
      */
-    protected function register(Request $request)
+    protected function create(array $data)
     {
-        $data = $request->all();
         return User::create([
-            'name' => $data['inputName'],
-            'email' => $data['inputEmail'],
-            'password' => Hash::make($data['inputPassword']),
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
         ]);
     }
 }
