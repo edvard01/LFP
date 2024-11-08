@@ -3,6 +3,7 @@
 @section('content')
 <div class="card w-25 mx-auto bg-white">
     <form method="POST" action="{{ route('register') }}" class="d-flex align-items-center flex-column my-5">
+        @csrf
         <img src="{{ asset('images/wow-icon.png') }}" alt="Icon" class="mb-4" width="72" height="72">
         <h2>Register</h2>
 
@@ -40,7 +41,7 @@
             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm password">
         </div>
         
-        <button class="btn btn-lg btn-primary btn-block mt-4 px-5" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block mt-4 px-5" type="submit">Register</button>
     </form>
     <p class="relative-bottom m-auto mb-3">Already have an account? <a href="/login">Click here to login!</a></p>
 </div>

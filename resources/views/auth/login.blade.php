@@ -3,6 +3,7 @@
 @section('content')
 <div class="card w-25 mx-auto bg-white">
     <form method="POST" action="{{ route('login') }}" class="d-flex align-items-center flex-column my-5">
+        @csrf
         <img src="{{ asset('images/wow-icon.png') }}" alt="Icon" class="mb-4" width="72" height="72">
         <h2>Please sign in</h2>
         
