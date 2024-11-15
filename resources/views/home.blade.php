@@ -19,8 +19,8 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->created_at }}</td>
-                        <td><button type="button" class="btn btn-warning btn-sm d-flex align-items-center"><span class="material-symbols-outlined">edit</span></button></td>
-                        <td><button class="btn btn-danger btn-sm d-flex align-items-center"><span class="material-symbols-outlined">delete</span></button></td>
+                        <td><button type="button" class="btn btn-warning btn-sm d-flex align-items-center" style="padding-left: 4px; padding-right: 4px;"><span class="material-symbols-outlined">edit</span></button></td>
+                        <td><button type="button" class="btn btn-danger btn-sm d-flex align-items-center" style="padding-left: 4px; padding-right: 4px;"><span class="material-symbols-outlined">delete</span></button></td>
                     </tr>
                 @endforeach
             </tbody>
