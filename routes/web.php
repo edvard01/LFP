@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/characters', [CharacterController::class, 'index'])->name('characters');
 });
 
 Auth::routes();
