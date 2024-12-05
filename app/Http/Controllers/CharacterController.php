@@ -7,13 +7,13 @@ use App\Models\User;
 use App\Models\Character;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller 
+class CharacterController extends Controller 
 {
     public function index()
     {
         $user = Auth::user();
         $characters = $user->characters();
 
-        return view('display-characters', ['characters' => $characters]);
+        return view('characterOverview', ['characters' => $characters]);
     }
 }
